@@ -54,7 +54,6 @@ header {
     border-bottom: 4px solid transparent;
     letter-spacing: 0.1875rem;
 }
-
 .nav__link:hover {
     color: var(--color-black);
     border-color: var(--color-primary);
@@ -64,4 +63,112 @@ header {
 }
 .nav__element:last-child {
     padding-right: 0;
+}
+
+.section__opening {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.opening__content {
+    margin-top: 130px;
+    text-align: center;
+}
+.opening__header {
+    font-family: var(--font-releway);
+    font-weight: normal;
+    font-size: 3.0625rem;
+    color: var(--color-black)
+}
+.opening__heading {
+    padding-top: 20px;
+    padding-bottom: 38px;
+}
+.opening__image {
+    width: 100%;
+    height: auto;
+}
+
+.btn {
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 16px 65px;
+    border-radius: var(--button-radius);
+    border: none;
+}
+.btn__primary {
+    background-color: var(--color-primary);
+    border-radius: var(--button-radius);
+    box-shadow: 3px 10px 14px var(--color-primary-shadow);
+}
+.btn__large {
+    padding: 22px 155px;
+}
+
+.statistics {
+    margin-top: 100px;
+}
+h2 {
+    font-family: var(--font-releway);
+    font-size: 2.25rem;
+    text-align: center;
+}
+.statistics__container {
+    display: flex;
+    max-width: 800px;
+    margin: 100px auto;
+    justify-content: space-between;
+}
+.statistics__single {
+    max-width: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.statistics__circle {
+    width: 63px;
+    height: 63px;
+    border-radius: 50%;
+    position: relative;
+}
+.statistics__icon {
+    position: absolute;
+}
+.statistics__single:nth-child(1) .statistics__circle {
+    background-color: var(--color-redish);
+}
+.statistics__single:nth-child(1) .statistics__icon {
+    top: 0;
+    left: 45%;
+}
+.statistics__single:nth-child(2) .statistics__circle {
+    background-color: var(--color-primary);
+}
+.statistics__single:nth-child(2) .statistics__icon {
+    top: 25%;
+    left: 35%;
+}
+.statistics__single:nth-child(3) .statistics__circle {
+    background-color: var(--color-green);
+}
+.statistics__single:nth-child(3) .statistics__icon {
+    top: 6px;
+    left: 50%;
+}
+.statistics__number {
+    font-family: var(--font-releway);
+    font-weight: 800;
+    font-size: 1.25rem;
+    text-align: center;
+    margin-top: 14px;
+    color: var(--color-black);
+}
+.statistics__description {
+    font-family: var(--font-releway);
+    font-size: 1.0625rem;
+    color: var(--color-grey);
+    text-align: center;
+    margin-top: 19px;
 }
