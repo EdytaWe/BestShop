@@ -512,6 +512,9 @@ footer {
     color: var(--color-grey);
     margin-top: 10px;
 }
+.social__media {
+    cursor: pointer;
+}
 .facebook {
     margin-left: 20px;
 }
