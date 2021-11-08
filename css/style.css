@@ -96,6 +96,7 @@ header {
     padding: 16px 65px;
     border-radius: var(--button-radius);
     border: none;
+    cursor: pointer;
 }
 .btn__primary {
     background-color: var(--color-primary);
@@ -322,7 +323,7 @@ h2 {
 
 .pricing__type {
     font-size: 1.25rem;
-    font-family: var(--font-raleway);
+    font-family: var(--font-releway);
     font-weight: 700;
 }
 
@@ -338,7 +339,7 @@ h2 {
     text-align: center;
     margin-top: 15px;
     font-size: 0.75rem;
-    font-family: var(--font-raleway);
+    font-family: var(--font-releway);
     font-weight: 700;
 }
 .pricing__items {
@@ -398,5 +399,101 @@ h2 {
     --accent-color: var(--color-green);
 }
 
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 80px 250px 250px;
+}
+.contact__column {
+    width: 50%;
+}
+.contact__title {
+    font-family: var(--font-releway);
+    font-size: 3.0625rem;
+    color: var(--color-black);
+    line-height: 3.5625rem;
+}
+.contact__instruction {
+    line-height: 1.375rem;
+    margin-top: 22px;
+    margin-bottom: 42px;
+}
+.contact__details {
+    display: flex;
+}
+.contact__item {
+    text-decoration: none;
+    color: var(--color-grey);
+    line-height: 1.375rem;
+    font-weight: 600;
+    padding-right: 20px;
+}
+.form__column {
+    display: flex;
+    flex-direction: column;
+}
+.form__label {
+    display: flex;
+    flex-direction: column;
+}
+.form__field {
+    display: flex;
+    flex-direction: column;
+}
+.form__label {
+    font-weight: bold;
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    letter-spacing: 3.28px;
+    line-height: 0.9375rem;
+}
+input[type="text"] {
+    border: none;
+    border-bottom: 2px solid var(--color-grey);
+    background-color: transparent;
+    line-height: 2.625rem;
+}
+input[type="text"]:first-of-type {
+    margin-bottom: 42px;
+}
+.checkbox {
+    display: flex;
+    cursor: pointer;
+}
+input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+}
+.checkbox span {
+    display: box;
+    flex-basis: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    border: 1px solid var(--color-grey);
+    border-radius: 4px;
+}
+input[type="checkbox"]:checked ~ .checkbox {
+    background-image: url(../assets/Checkmark.svg);
+    background-position: center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+}
+.checkbox p {
+    font-size: 0.75rem;
+    line-height: 1.0625rem;
+    color: var(--color-grey);
+    margin-left: 10px;
+}
+.form__btn {
+    align-self: flex-end;
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    padding: 20px 97px;
+    margin-top: 20px;
+}
 
 
