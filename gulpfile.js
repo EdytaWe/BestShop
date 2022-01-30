@@ -27,7 +27,7 @@ function watcher(done) {
     gulp.watch(entryPath + "/**/*.scss", gulp.series(compileSass, reload));
     gulp.watch("./public/*.html", gulp.series(reload));
 
-    gulp.watch(entryPath + "/js/*.js", gulp.series(reload));
+    gulp.watch("./public/js/*.js", gulp.series(reload));
 
     done();
 }
