@@ -25,6 +25,43 @@ function Calculator(form, summary) {
             price: summary.querySelector(".total__price")
         }
     };
-}
+};
+
+Calculator.prototype.inputEvent = function (e){
+    const id = e.currentTarget.id;
+    const value = e.currentTarget.value;
+    const singlePrice = this.prices[id];
+    const totalPrice = value * singlePrice;
+
+    this.updateSummary(id, value + " * $" + singlePrice, totalPrice, function (item, calc, total) {
+        if (value < 0) {
+            calc.innerHTML = null;
+            total.innerText = "Value should be greater than 0";
+        }
+
+        if (value.length === 0) {
+            item.classList.remove("open");
+        }
+    });
+};
+
+Calculator.prototype.updateSummary = function (id, calc, total, callback) {
+    const summary = this.summary.list.querySelector("[data-id=" + id + "]");
+    const summaryCalc = summary.querySelector(".item__calc");
+    const summaryTotal = summary.querySelector(".item__price");
+
+    summary.classList.add("open");
+
+    if (summaryCalc !== null) {
+        summaryCalc.innerText = calc;
+    }
+
+    summaryTotal.innerText = "$" + total;
+
+    if (typeof callback === "function") {
+        callback(summary, summaryCalc, summaryTotal);
+    }
+};
+
 
 
